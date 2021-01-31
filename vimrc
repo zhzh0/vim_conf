@@ -1,29 +1,3 @@
-"==========================================
-" Author:  wklken
-" Version: 9.1
-" Email: wklken@yeah.net
-" BlogPost: http://www.wklken.me
-" ReadMe: README.md
-" Donation: http://www.wklken.me/pages/donation.html
-" Last_modify: 2015-12-15
-" Sections:
-"       -> Initial Plugin 加载插件
-"       -> General Settings 基础设置
-"       -> Display Settings 展示/排版等界面格式设置
-"       -> FileEncode Settings 文件编码设置
-"       -> Others 其它配置
-"       -> HotKey Settings  自定义快捷键
-"       -> FileType Settings  针对文件类型的设置
-"       -> Theme Settings  主题设置
-"
-"       -> 插件配置和具体设置在vimrc.bundles中
-" Note: Don't put anything in your .vimrc you don't understand!
-"==========================================
-
-"==========================================
-" Initial Plugin 加载插件
-"==========================================
-
 " 设置文件模糊搜索
 set path+=**
 set wildmenu
@@ -32,13 +6,12 @@ set wildmenu
 let mapleader = ';'
 let g:mapleader = ';'
 
+" go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
-" let g:go_def_mode = 'godef'
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
-
 
 
 " 开启语法高亮
@@ -227,17 +200,13 @@ autocmd CmdwinEnter * nnoremap <buffer> <CR> <CR>
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
+"
 "Treat long lines as break lines (useful when moving around in them)
 "se swap之后，同物理行上线直接跳
 nnoremap k gk
 nnoremap gk k
 nnoremap j gj
 nnoremap gj j
-
-
-" disbale paste mode when leaving insert mode
-au InsertLeave * set nopaste
 
 
 " 分屏窗口移动, Smart way to move between windows
