@@ -41,12 +41,9 @@ filetype plugin indent on
 
 " 文件修改之后自动载入
 set autoread
-" 启动的时候不显示那个援助乌干达儿童的提示
 "
 " 关闭交换文件
 set noswapfile
-
-set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 
 " 突出显示当前列
 set cursorcolumn
@@ -77,8 +74,8 @@ set viminfo^=%
 set magic
 
 " Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+"set backspace=eol,start,indent
+"set whichwrap+=<,>,h,l
 
 "==========================================
 " Display Settings 展示/排版等界面格式设置
