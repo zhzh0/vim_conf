@@ -27,6 +27,7 @@ call plug#begin('~/.vim/bundle')
 " Group dependencies, vim-snippets depends on ultisnips
 " 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' 
 "
 " quick locate file or function
 " 文件搜索
@@ -69,6 +70,10 @@ endif
 
 " Add plugins to &runtimepath
 call plug#end()
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " ################### 快速编码 ###################
